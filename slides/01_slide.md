@@ -1,9 +1,9 @@
 !SLIDE
-# Automate Everything #
+# Automate Everything
 ## For Extra Super Fun
 
 !SLIDE
-# If you do it once... #
+# If you do it once...
 <img src="2b.png" style="z-index:-5;float:left;position:absolute;top:0">
 
 !SLIDE
@@ -11,41 +11,61 @@
 ## Baby steps
 
 !SLIDE bullets
-# zsh #
+# zsh
 
 * Easy to do command compleation
 * (Which is just anther type of automation)
 * Stored in my `.zshrc`
-* Anything advanced falls back ruby
+* Anything advanced use ruby
 
 !SLIDE bullets
-# Pow
-## Always restarting
+# src command
 
-!SLIDE bullets
-# Pow
-## Always restarting
-
+## Typing `~/src/` all the time is not fun
 
 !SLIDE commandline incremental
-# Kapow
+# src command
 
-    $ src ziplist
-    Using /Users/csexton/.rvm/gems/ruby-1.8.7-p302 with gemset ziplist
+    $ src zi<TAB>
+    ~/src/ziplist $
+
+!SLIDE
+# src command
+
+    src(){cd ~/src/$1;}
+    compctl -W ~/src -/ src
+!SLIDE
+# Pow
+## Always restarting is not super
+
+
+
+!SLIDE
+# kapow command
+
+    function kapow {
+      touch ~/.pow/$1/tmp/restart.txt
+      if [ $? -eq 0 ]; then
+        echo "Pow restarting $1..."
+      fi
+    }
+    compctl -W ~/.pow -/ kapow
+
+!SLIDE commandline incremental
+# kapow command
+
     $ kapow ziplist
     Kapow! Restarted ziplist.dev
+<!-- !SLIDE bullets incremental
+# kapow command
 
-!SLIDE bullets incremental
-# Kapow
 * Fixed initial annoyance
 * Improved on it
 * Added fun
-
+--> 
 !SLIDE commandline incremental
-# Kapow
+# extra super kapow command
 
-    $ src ziplist
-    Using /Users/csexton/.rvm/gems/ruby-1.8.7-p302 with gemset ziplist
     $ kapow
                 --_--
              (  -_    _).
@@ -60,22 +80,12 @@
 
 
 
-!SLIDE bullets
-# src command #
 
-* Very common task
-* Generic solution
-
-!SLIDE commandline incremental
-# src command #
-
-    $ src zi<TAB>
-    ~/src/ziplist $
-
-
-!SLIDE commandline incremental
+!SLIDE
 # Automate remembering
-## ssh-keyput
+!SLIDE
+# ssh-keyput command
+## Remembering permissions on .ssh/knownhosts is not extra
 
 !SLIDE commandline incremental
 # ssh-keyput
@@ -87,14 +97,19 @@
 
 !SLIDE
 # Automate your system
-## Detect displays
 !SLIDE
-# Detect displays #
-
+# Detect displays
+## Opening and navigating system prefs is not super extra
+!SLIDE
+# Detect Displays
 ## LaunchBar and AppleScript
 
 !SLIDE
-# Detect displays #
+<img src="lb.png" style="float:left;position:absolute;top:0px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.50); border: 1px solid #999; left: 300px;">
+<img src="detect.png" style="float:left;left:130px;position:absolute;top:60px">
+
+!SLIDE
+# Detect Displays
 
     tell application "System Preferences"
       activate
