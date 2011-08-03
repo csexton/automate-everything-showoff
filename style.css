@@ -1,0 +1,37 @@
+body {
+   /* background: #9c9; */
+text-shadow: 0px -2px 5px #f6efd5,0px 2px 5px #f6efd5, 2px 0px 5px #f6efd5,-2px 0px 5px #f6efd5;
+}
+.slide {
+  background:#ffffff url('/image/slides/background.png') no-repeat right top;
+}
+
+.preso:nth-child( { odd } ) {
+  background:#ffffff url('/image/slides/2.jpeg') no-repeat right top;
+}
+#footer {
+  z-index: 100;
+  background-color: #e9cc99;
+}
+
+
+.subsection {
+  background: #888;
+  font-size: 2em;
+  /* text-shadow: 8px 8px 8px #000; */
+}
+
+/* remove annoying white line on seubsections */
+#preso .slide {
+  border-right:thin solid #333;
+}
+
+p.filename {
+  color: #999;
+  padding: 1em;
+  font-size: 1.8em;
+}
+
+.aside {
+  color: #aaa;
+}
