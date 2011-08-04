@@ -16,9 +16,10 @@
 * Easy to do command compleation
 * (Which is just anther type of automation)
 * Stored in my `.zshrc`
-* Anything advanced use ruby
+* It's not ruby
+* Anything tricky, use ruby
 
-!SLIDE bullets
+!SLIDE
 # src command
 
 ## Typing `~/src/` all the time is not fun
@@ -34,10 +35,10 @@
 
     src(){cd ~/src/$1;}
     compctl -W ~/src -/ src
+
 !SLIDE
 # Pow
 ## Always restarting is not super
-
 
 
 !SLIDE
